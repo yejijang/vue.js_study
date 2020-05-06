@@ -15,10 +15,9 @@ let a2 = [];
 for (let i = 0; i < a1.length; ++i) {
     a2[i] = [];
     for (let j = 0; j < 2; ++j) {
-         Object.assign(a2[i][j],a1[i][j]);
+         a2[i][j] = a1[i][j];
     }
 }
-// 다시 풀어보기
 
 //(4) a1[0][0] = 100; 을 실행한다.
 a1[0][0] = 100;
