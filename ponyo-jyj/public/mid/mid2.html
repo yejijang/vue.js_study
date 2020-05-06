@@ -14,6 +14,23 @@
             border: 1px solid black;
             text-align: center;
         }
+
+        div#app {
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 600px;
+            border: 1px solid #ccc;
+            box-shadow: 3px 3px 3px #aaa;
+        }
+
+        input[type=text] {
+            margin-left: 33%;
+            margin-bottom: 20px;
+            font-size: 15pt;
+            padding: 5px;
+            width: 200px;
+            text-align: center;
+        }
     </style>
 </head>
 
@@ -23,7 +40,6 @@
         <table>
             <tr v-for="a in size">
                 <td>
-                    <!-- {{(b+1)}} * {{a}} = {{a*(b+1)}} -->
                     {{value}} * {{a}} = {{value * a}}
                 </td>
             </tr>
