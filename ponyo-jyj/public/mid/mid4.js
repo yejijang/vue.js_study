@@ -7,7 +7,7 @@ for (let i = 0; i < 100; ++i) {
 }
 
 //(3) 배열에서 짝수의 갯수를 구해서 출력하라. (반복문 없이, 전역변수 없이, reduce 메소드를 사용하여 구현하라)
-let b = a.filter((e) => e % 2 === 0);
+let count = a.reduce((a, b) => a + b, 0) % 2 ? 1 : 0;
+console.log(count);
 
-let sum = b.reduce((a, b) => a + b);
-console.log(sum);
+// 다시 풀어보기
