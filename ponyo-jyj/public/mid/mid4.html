@@ -17,26 +17,36 @@
             width: 20px;
             height: 20px;
         }
+
+        .pink {
+            background-color: #FFEEEE;
+        }
+
+        .purple {
+            background-color: #EEEEFF;
+        }
     </style>
 </head>
 
 <body>
 
-    <div id="app">
+    <div id="app" v-bind:class="{purple:gender, pink:!gender}">
         <label>
-            <input type="radio" v-bind:value="'M'" v-model="gender" />
+            <input type="radio" v-bind:value="true" v-model="gender" />
             남자
         </label>
         <label>
-            <input type="radio" v-bind:value="'W'" v-model="gender" />
+            <input type="radio" v-bind:value="false" v-model="gender" />
             여자
         </label>
+        <h1 v-show="gender">남자</h1>
+        <h1 v-show="!gender">여자</h1>
     </div>
     <script type="text/javascript">
         var app = new Vue({
             el: '#app',
             data: {
-                gender: ''
+                gender: false
             }
         })
     </script>
